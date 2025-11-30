@@ -3,7 +3,7 @@
 // ============================================
 // CONFIGURATION - UPDATE THESE VALUES
 // ============================================
-const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID_HERE';
+const SPREADSHEET_ID = '1tnPT8xTrQJnFJlHYfCwR5YOO64HLKw_CSPYDcqgyv3s';
 const SHEET_NAME = 'Applications';
 
 // ============================================

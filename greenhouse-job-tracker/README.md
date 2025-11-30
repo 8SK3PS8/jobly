@@ -1,5 +1,6 @@
 # 🌱 Greenhouse Job Tracker
 
+
 A Chrome extension that scrapes job application data from Greenhouse job boards and saves them to Google Sheets for easy tracking.
 
 ## Features

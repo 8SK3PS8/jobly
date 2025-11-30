@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌱 Job Tracker</h1>
+    </header>
+
+    <!-- Message shown when not on a Greenhouse page -->
+    <div id="not-greenhouse" class="message-box hidden">
+      <p>Navigate to a <strong>Greenhouse</strong> job posting to track it.</p>
+      <p class="hint">Example: boards.greenhouse.io/company/jobs/...</p>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loading" class="message-box hidden">
+      <p>Loading job data...</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="error-state" class="message-box error hidden">
+      <p id="error-message">An error occurred</p>
+    </div>
+
+    <!-- Job preview section -->
+    <div id="job-preview" class="hidden">
+      <div class="field">
+        <label for="company">Company</label>
+        <input type="text" id="company" readonly>
+      </div>
+
+      <div class="field">
+        <label for="title">Job Title</label>
+        <input type="text" id="title" readonly>
+      </div>
+
+      <div class="field">
+        <label for="location">Location</label>
+        <input type="text" id="location" readonly>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="Applied" selected>Applied</option>
+          <option value="Interview">Interview</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Offer">Offer</option>
+        </select>
+      </div>
+
+      <button id="save-btn" type="button">
+        <span id="btn-text">Save to Sheets</span>
+        <span id="btn-loading" class="hidden">Saving...</span>
+      </button>
+    </div>
+
+    <!-- Status message area -->
+    <div id="status-message" class="hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
